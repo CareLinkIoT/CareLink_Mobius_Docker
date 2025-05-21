@@ -4,19 +4,18 @@ services:
 
 
  db:
-    image: mysql
+    image: "mysql:8.0.37"
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_USER: "root"
       MYSQL_ROOT_PASSWORD: "dksdlfduq2"
       MYSQL_DATABASE: "mobiusdb"
     ports:
       - "3306:3306"
     network_mode: "host"
     volumes:
-      - ./Mobius/mobius/mobiusdb.sql:/docker-entrypoint-initdb.d/mobiusdb.sql
+      - ./CareLink-Mobius/mobius/mobiusdb.sql:/docker-entrypoint-initdb.d/mobiusdb.sql
     healthcheck:
             test: ["CMD", "mysqladmin" ,"--password=dksdlfduq2","ping"]
             interval: 20s
