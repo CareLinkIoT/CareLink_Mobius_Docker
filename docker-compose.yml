@@ -27,7 +27,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./Mobius:/home/node/app
+      - ./CareLink-Mobius:/home/node/app
     network_mode: "host"
     expose:
       - "8081"
