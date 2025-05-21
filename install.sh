@@ -10,9 +10,9 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 
 sudo chmod +x /usr/local/bin/docker-compose
 
-git clone https://github.com/IoTKETI/Mobius.git
+git clone https://github.com/CareLinkIoT/CareLink-Mobius.git
 
-cd Mobius
+cd CareLink-Mobius
 
 sudo npm install
 
